@@ -8,7 +8,6 @@ from app.models.estoque import Estoque
 from app.models.roupa import Roupa
 config = context.config
 
-# Configuração do log
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 

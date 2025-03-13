@@ -4,7 +4,7 @@ from app.services.estoque import create_estoque, get_estoque, get_all_estoques
 from app.schemas.estoque import EstoqueRequest, EstoqueResponse
 from app.core.database import get_db
 
-router = APIRouter(prefix="/estoques", tags=["Estoques"])
+router = APIRouter(prefix="/estoques")
 
 @router.post("/", response_model=EstoqueResponse)
 def create_estoque_endpoint(estoque_data: EstoqueRequest, db: Session = Depends(get_db)):

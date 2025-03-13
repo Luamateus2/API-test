@@ -4,7 +4,7 @@ from app.services.roupa import create_roupa, get_roupa, get_all_roupas
 from app.schemas.roupa import RoupaRequest, RoupaResponse
 from app.core.database import get_db
 
-router = APIRouter(prefix="/roupas", tags=["Roupas"])
+router = APIRouter(prefix="/roupas")
 
 @router.post("/", response_model=RoupaResponse)
 def create_roupa_endpoint(roupa_data: RoupaRequest, db: Session = Depends(get_db)):
